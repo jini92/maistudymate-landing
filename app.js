@@ -32,7 +32,7 @@ function setLang(lang) {
 document.querySelectorAll("[data-setlang]").forEach((btn) => {
   btn.addEventListener("click", () => setLang(btn.dataset.setlang));
 });
-setLang(localStorage.getItem(LANG_KEY) || "vi");
+setLang(localStorage.getItem(LANG_KEY) || "ko");
 
 /* body uses data-lang from <html>; mirror for CSS selectors */
 new MutationObserver(() => {

@@ -29,14 +29,17 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip; /* 회전된 마퀴 등 변형 요소의 가로 패닝 차단 (모바일) */
+}
 
 body {
   font-family: var(--font-body);
   background: var(--paper);
   color: var(--ink);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -55,7 +58,8 @@ body::after {
 [data-lang="vi"] .ko { display: none !important; }
 [data-lang="ko"] .vi { display: none !important; }
 
-.ko { font-family: var(--font-ko-body); }
+.ko { font-family: var(--font-ko-body); word-break: keep-all; }
+[data-lang="ko"] body, [data-lang="ko"] h1, [data-lang="ko"] h2, [data-lang="ko"] h3 { word-break: keep-all; }
 h1 .ko, h2 .ko, .display .ko {
   font-family: var(--font-ko-display);
   font-weight: 400;
@@ -942,7 +946,14 @@ html.js .reveal.in { opacity: 1; transform: none; }
 }
 @media (max-width: 760px) {
   .nav, .head-cta { display: none; }
-  .menu-btn { display: block; }
+  .menu-btn { display: block; flex: none; }
+  .site-head .wrap { gap: 10px; padding: 0 16px; }
+  .brand { font-size: 1.02rem; gap: 6px; margin-right: auto; }
+  .brand .mark { width: 24px; height: 24px; }
+  .brand .city { display: none; }
+  .lang-toggle { font-size: 0.72rem; flex: none; }
+  .lang-toggle button { padding: 4px 9px; }
+  .announce { font-size: 0.72rem; padding: 7px 12px; }
   .nav.open {
     display: flex;
     flex-direction: column;
