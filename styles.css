@@ -287,7 +287,7 @@ a { color: inherit; }
   letter-spacing: -0.02em;
 }
 .stat b .ko { font-family: var(--font-ko-body); font-weight: 900; }
-.stat span { font-size: 0.76rem; color: var(--ink-soft); line-height: 1.45; display: block; }
+.stat > span { font-size: 0.76rem; color: var(--ink-soft); line-height: 1.45; display: block; }
 
 /* --- kiosk board --- */
 .kiosk {
