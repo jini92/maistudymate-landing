@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="vi" data-lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAISTUDYMATE — Hôm nay vào quán, MAI nói tiếng Hàn | Cà phê × Study tiếng Hàn TP.HCM</title>
+  <meta name="description" content="Bước vào quán cà phê, chạm kiosk và join ngay một bàn học tiếng Hàn hôm nay — cùng tutor và bạn học thật. K-Culture class miễn phí, hội thoại, TOPIK, EPS. TP. Hồ Chí Minh." />
+  <meta property="og:title" content="MAISTUDYMATE — Hôm nay vào quán, MAI nói tiếng Hàn." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M18 12h18a14 14 0 0 1 14 14v8a14 14 0 0 1-14 14H26L14 58V46.5A14 14 0 0 1 4 34v-8a14 14 0 0 1 14-14z' fill='%23C8401F'/%3E%3Cpath d='M27 18l3 9 9 3-9 3-3 9-3-9-9-3 9-3z' fill='%23FBF7EC'/%3E%3C/svg%3E" />
+  <meta property="og:description" content="Join một bàn học tiếng Hàn ngay hôm nay tại TP.HCM. Lớp trải nghiệm miễn phí — số chỗ có hạn." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Gasoek+One&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ======= Announcement ======= -->
+  <div class="announce">
+    <span class="vi">☕ Khai giảng lớp trải nghiệm <b>MIỄN PHÍ</b> tại TP.HCM — số chỗ có hạn<span class="dot">✶</span><a href="#contact">Giữ chỗ ngay</a></span>
+    <span class="ko">☕ 호치민 <b>무료 체험 클래스</b> 오픈 — 좌석 한정<span class="dot">✶</span><a href="#contact">지금 신청하기</a></span>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="#top">
+        <svg class="mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M23 14c0-3.5 4.5-3.5 4.5-7.5" stroke="#231711" stroke-width="3" stroke-linecap="round"/>
+          <path d="M33 14c0-3.5 4.5-3.5 4.5-7.5" stroke="#231711" stroke-width="3" stroke-linecap="round"/>
+          <path d="M46 30h3a7 7 0 0 1 0 14h-4" stroke="#231711" stroke-width="3"/>
+          <path d="M18 20h18a10 10 0 0 1 10 10v6a10 10 0 0 1-10 10H26l-11 9v-9.8A10 10 0 0 1 8 36v-6a10 10 0 0 1 10-10z" fill="#FBF7EC" stroke="#231711" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M27 24l2.3 6.7 6.7 2.3-6.7 2.3-2.3 6.7-2.3-6.7-6.7-2.3 6.7-2.3z" fill="#C8401F"/>
+        </svg>
+        MAI<span class="star">✶</span>STUDYMATE <span class="city">HCMC</span></a>
+      <nav class="nav" id="nav">
+        <a href="#how"><span class="vi">Cách hoạt động</span><span class="ko">이용 방법</span></a>
+        <a href="#programs"><span class="vi">Chương trình</span><span class="ko">프로그램</span></a>
+        <a href="#why"><span class="vi">Vì sao khác biệt</span><span class="ko">차별점</span></a>
+        <a href="#b2b"><span class="vi">Doanh nghiệp</span><span class="ko">기업 교육</span></a>
+        <a href="#partner"><span class="vi">Đối tác quán</span><span class="ko">카페 제휴</span></a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-setlang="vi" class="active">VI</button>
+        <button type="button" data-setlang="ko">KO</button>
+      </div>
+      <a class="btn btn-red btn-sm head-cta" href="#contact"><span class="vi">Học thử miễn phí</span><span class="ko">무료 체험</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ======= Hero ======= -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <span class="eyebrow reveal">
+            <span class="vi">Quán cà phê × Study tiếng Hàn — đầu tiên tại TP.HCM</span>
+            <span class="ko">카페 × 한국어 스터디 — 호치민 최초</span>
+          </span>
+          <h1 class="reveal" data-delay="1">
+            <span class="vi">Tiếng Hàn không nằm trong lớp học.<br />Nó nằm ở <em>quán cà phê</em>.</span>
+            <span class="ko">한국어는 교실이 아니라,<br /><em>카페</em>에서 자랍니다.</span>
+          </h1>
+          <p class="lede reveal" data-delay="2">
+            <span class="vi">Bước vào quán, chạm kiosk và join ngay một bàn học tiếng Hàn hôm nay — cùng tutor và những người bạn học thật. Tự học trên app, thực hành mặt-đối-mặt tại quán.</span>
+            <span class="ko">카페에 들어와 키오스크를 터치하면, 오늘 열리는 한국어 스터디에 바로 조인. 앱으로 자율학습하고, 카페에서 대면 회화로 완성합니다.</span>
+          </p>
+          <div class="hero-ctas reveal" data-delay="2">
+            <a class="btn btn-red" href="#contact"><span class="vi">Học thử miễn phí →</span><span class="ko">무료 체험 신청 →</span></a>
+            <a class="btn" href="#programs"><span class="vi">Xem chương trình</span><span class="ko">프로그램 보기</span></a>
+          </div>
+          <div class="hero-stats reveal" data-delay="3">
+            <div class="stat">
+              <b>85.896</b>
+              <span class="vi">thí sinh TOPIK tại Việt Nam (2025) — #1 thế giới ngoài Hàn Quốc</span>
+              <span class="ko">2025 베트남 TOPIK 응시자 — 해외 1위</span>
+            </div>
+            <div class="stat">
+              <b>12,1<small>M</small></b>
+              <span class="vi">fan Hallyu tại Việt Nam — cùng một cộng đồng với bạn</span>
+              <span class="ko">베트남 한류 팬 — 함께하는 커뮤니티</span>
+            </div>
+            <div class="stat">
+              <b>3 <span class="vi">chạm</span><span class="ko">터치</span></b>
+              <span class="vi">để join một bàn học ngay khi bước vào quán</span>
+              <span class="ko">카페 입장부터 스터디 조인까지</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-kiosk reveal" data-delay="2">
+          <div class="kiosk">
+            <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
+              <defs><path id="circ" d="M 60,60 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0" /></defs>
+              <circle cx="60" cy="60" r="56" fill="#c8401f" stroke="#231711" stroke-width="2.5"/>
+              <circle cx="60" cy="60" r="30" fill="none" stroke="#fbf7ec" stroke-width="1.5" stroke-dasharray="3 4"/>
+              <text fill="#fbf7ec" font-size="12.5" font-weight="bold" letter-spacing="2.5">
+                <textPath href="#circ">JOIN TODAY ✶ 스터디조인 ✶</textPath>
+              </text>
+              <text x="60" y="67" text-anchor="middle" fill="#fbf7ec" font-size="20" font-weight="900">GO!</text>
+            </svg>
+
+            <div class="kiosk-head">
+              <span class="t"><span class="vi">Hôm nay tại quán · <span class="hangul">스터디</span></span><span class="ko">오늘의 스터디 · TODAY</span></span>
+              <span class="live">LIVE</span>
+            </div>
+
+            <div class="session">
+              <span class="time">09:30</span>
+              <span class="name">
+                <span class="vi">Cà phê &amp; Hội thoại — Sơ cấp</span><span class="ko">카페 회화테이블 — 초급</span>
+                <span class="meta"><span class="vi">Bàn 3 · Tutor Linh · 60ph</span><span class="ko">3번 테이블 · 린 튜터 · 60분</span></span>
+              </span>
+              <span class="chip chip-open"><span class="vi">Còn 2 chỗ</span><span class="ko">2석 남음</span></span>
+            </div>
+            <div class="session">
+              <span class="time">11:00</span>
+              <span class="name">
+                <span class="vi">Bàn tự học: luyện TOPIK cùng nhau</span><span class="ko">셀프 스터디: TOPIK 준비생끼리</span>
+                <span class="meta"><span class="vi">Bàn 4 · ghép cùng chủ đề học · 1 đồ uống</span><span class="ko">4번 테이블 · 같은 공부끼리 매칭 · 1음료</span></span>
+              </span>
+              <span class="chip chip-free"><span class="vi">0đ</span><span class="ko">무료</span></span>
+            </div>
+            <div class="session">
+              <span class="time">14:00</span>
+              <span class="name">
+                <span class="vi">TOPIK II — Đọc hiểu</span><span class="ko">TOPIK II — 읽기 집중</span>
+                <span class="meta"><span class="vi">Bàn 1 · Tutor Minh · 90ph</span><span class="ko">1번 테이블 · 민 튜터 · 90분</span></span>
+              </span>
+              <span class="chip chip-hot"><span class="vi">Sắp đầy</span><span class="ko">마감 임박</span></span>
+            </div>
+            <div class="session">
+              <span class="time">17:30</span>
+              <span class="name">
+                <span class="vi">K-Culture: Học qua lời bài hát K-pop</span><span class="ko">K-컬처: 가사로 배우는 한국어</span>
+                <span class="meta"><span class="vi">Khu lounge · 45ph · buổi đầu miễn phí</span><span class="ko">라운지 · 45분 · 첫 회 무료</span></span>
+              </span>
+              <span class="chip chip-free">FREE</span>
+            </div>
+            <div class="session">
+              <span class="time">19:00</span>
+              <span class="name">
+                <span class="vi">Bàn hội thoại tối — Trung cấp</span><span class="ko">저녁 회화테이블 — 중급</span>
+                <span class="meta"><span class="vi">Bàn 2 · Tutor Hà · 60ph</span><span class="ko">2번 테이블 · 하 튜터 · 60분</span></span>
+              </span>
+              <span class="chip chip-open"><span class="vi">Còn 4 chỗ</span><span class="ko">4석 남음</span></span>
+            </div>
+
+            <div class="kiosk-foot">
+              <span class="vi">Chạm để join · thanh toán tại kiosk</span>
+              <span class="ko">터치 한 번으로 조인 · 키오스크 결제</span>
+              <span class="pay"><i>MoMo</i><i>ZaloPay</i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Marquee ======= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>CÀ PHÊ ☕ <b class="hangul">한국어</b> ✶ STUDY MATE ✶ <b class="hangul">스터디조인</b> ✶ TOPIK ✶ K-CULTURE ✶ HỘI THOẠI ✶ <b class="hangul">회화</b> ✶ HÔM NAY VÀO QUÁN, MAI NÓI TIẾNG HÀN ✶ JOIN TODAY ✶&nbsp;</span>
+        <span>CÀ PHÊ ☕ <b class="hangul">한국어</b> ✶ STUDY MATE ✶ <b class="hangul">스터디조인</b> ✶ TOPIK ✶ K-CULTURE ✶ HỘI THOẠI ✶ <b class="hangul">회화</b> ✶ HÔM NAY VÀO QUÁN, MAI NÓI TIẾNG HÀN ✶ JOIN TODAY ✶&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ======= How it works ======= -->
+    <section id="how" class="section-pad">
+      <div class="wrap">
+        <p class="kicker reveal"><span class="vi">Cách hoạt động</span><span class="ko">이용 방법</span></p>
+        <h2 class="title reveal">
+          <span class="vi">Join một bàn học trong 3 bước</span>
+          <span class="ko">3번의 터치로 스터디 조인</span>
+        </h2>
+        <p class="sub reveal" data-delay="1">
+          <span class="vi">Không ghi danh khóa dài hạn, không thủ tục. Giống như gọi một ly cà phê — nhưng thứ bạn nhận được là một bàn học tiếng Hàn.</span>
+          <span class="ko">장기 등록도, 복잡한 절차도 없습니다. 커피 한 잔 주문하듯 — 오늘의 한국어 스터디를 주문하세요.</span>
+        </p>
+
+        <div class="steps">
+          <article class="step reveal" data-delay="1">
+            <span class="glyph">☕</span>
+            <h3><span class="vi">Bước vào quán</span><span class="ko">카페에 들어온다</span></h3>
+            <p>
+              <span class="vi">Một quán cà phê chuẩn vibe Seoul giữa Sài Gòn. Đến một mình cũng được — bạn học đã có sẵn ở đây.</span>
+              <span class="ko">사이공 한복판의 서울 감성 카페. 혼자 와도 괜찮습니다 — 스터디메이트가 이미 기다리고 있으니까요.</span>
+            </p>
+          </article>
+          <article class="step reveal" data-delay="2">
+            <span class="glyph">🖥️</span>
+            <h3><span class="vi">Chạm kiosk — chọn lớp</span><span class="ko">키오스크에서 조인</span></h3>
+            <p>
+              <span class="vi">Nhập trình độ &amp; sở thích, kiosk gợi ý các bàn học đang mở hôm nay: hội thoại, TOPIK, K-culture. Thanh toán ngay bằng MoMo / ZaloPay. Bàn tự học cùng nhau? Luôn luôn 0đ.</span>
+              <span class="ko">레벨과 관심사를 입력하면 오늘 열리는 스터디를 즉시 매칭. 회화·TOPIK·K-컬처 중 선택하고 MoMo/ZaloPay로 바로 결제. 셀프 스터디 테이블은 언제나 무료.</span>
+            </p>
+          </article>
+          <article class="step reveal" data-delay="3">
+            <span class="glyph">🗣️</span>
+            <h3><span class="vi">Ngồi vào bàn — học cùng nhau</span><span class="ko">테이블에서 함께</span></h3>
+            <p>
+              <span class="vi">Tutor và bạn học đang chờ ở bàn được chỉ định. Nói tiếng Hàn thật, với người thật — không phải với màn hình.</span>
+              <span class="ko">배정된 테이블에 튜터와 스터디메이트가 기다립니다. 화면이 아닌, 진짜 사람과의 진짜 대화.</span>
+            </p>
+          </article>
+        </div>
+
+        <div class="blended-note reveal">
+          <span class="loop">APP → CAFÉ → APP</span>
+          <span>
+            <span class="vi">Trước &amp; sau buổi học, bạn tự học từ vựng – ngữ pháp trên app. Đến quán chỉ để làm điều quan trọng nhất: <b>nói</b>. Đó là mô hình blended đã được chứng minh trên thế giới.</span>
+            <span class="ko">수업 전후엔 앱으로 어휘·문법을 자율학습하고, 카페에서는 가장 중요한 <b>말하기</b>에 집중합니다. 세계적으로 검증된 블렌디드 러닝 모델입니다.</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Programs ======= -->
+    <section id="programs" class="section-pad">
+      <div class="wrap">
+        <p class="kicker reveal"><span class="vi">Chương trình</span><span class="ko">프로그램</span></p>
+        <h2 class="title reveal">
+          <span class="vi">Chọn lộ trình của bạn</span>
+          <span class="ko">당신의 트랙을 고르세요</span>
+        </h2>
+        <p class="sub reveal" data-delay="1">
+          <span class="vi">Bắt đầu từ 0đ với bàn tự học cùng nhau, lên K-culture class, rồi hội thoại và TOPIK khi bạn sẵn sàng. Học theo nhịp của bạn.</span>
+          <span class="ko">무료 셀프 스터디 테이블로 시작해, K-컬처·회화·TOPIK 정규 트랙까지. 당신의 속도대로.</span>
+        </p>
+
+        <div class="tickets">
+          <article class="ticket ticket-free reveal">
+            <div class="price" aria-hidden="true">0đ</div>
+            <div class="free-body">
+              <span class="ticket-tag jade"><span class="vi">Gói miễn phí · mãi mãi</span><span class="ko">무료 플랜 · 계속 무료</span></span>
+              <h3><span class="vi">Bàn tự học cùng nhau</span><span class="ko">셀프 스터디 테이블</span></h3>
+              <p>
+                <span class="vi">Kiosk ghép bạn với những người <b>đang học cùng một thứ với bạn</b> — luyện TOPIK với người luyện TOPIK, hội thoại với người mê hội thoại — và cùng trình độ, ngay tại quán. Không tutor, không học phí: gọi một đồ uống, nhận bộ thẻ chủ đề và bắt đầu.</span>
+                <span class="ko">키오스크가 <b>같은 공부를 하는 손님끼리</b> 매칭합니다 — TOPIK 준비생은 TOPIK 준비생끼리, 회화 연습은 회화 연습끼리, 같은 레벨로. 튜터도 수강료도 없이, 음료 한 잔 주문하고 토픽 카드와 함께 시작하세요.</span>
+              </p>
+              <p class="conds">
+                <span><span class="vi">✓ Ghép cùng chủ đề học</span><span class="ko">✓ 같은 공부끼리 매칭</span></span>
+                <span><span class="vi">✓ 1 đồ uống / người</span><span class="ko">✓ 1인 1음료</span></span>
+                <span><span class="vi">✓ 60 phút giờ cao điểm</span><span class="ko">✓ 피크타임 60분</span></span>
+                <span><span class="vi">✓ Không cần đăng ký trước</span><span class="ko">✓ 사전 등록 불필요</span></span>
+                <span><span class="vi">✓ Thẻ chủ đề tại bàn</span><span class="ko">✓ 토픽 카드 제공</span></span>
+              </p>
+            </div>
+            <a class="btn btn-ink" href="#contact" data-prefill="peer"><span class="vi">Báo tôi khi có bàn cùng chủ đề →</span><span class="ko">같은 공부 테이블 알림 받기 →</span></a>
+          </article>
+
+          <article class="ticket reveal" data-delay="1">
+            <span class="ticket-tag gold"><span class="vi">Bắt đầu vui · buổi đầu 0đ</span><span class="ko">가볍게 시작 · 첫 회 무료</span></span>
+            <h3>K-CULTURE CLASS</h3>
+            <p class="who"><span class="vi">Cho fan K-pop · K-drama · ẩm thực Hàn</span><span class="ko">K-pop · 드라마 · 한식 팬을 위해</span></p>
+            <p>
+              <span class="vi">Học tiếng Hàn qua lời bài hát, thoại phim và món ăn bạn yêu thích. Drop-in từng buổi, không cần cam kết — chỉ cần tò mò.</span>
+              <span class="ko">좋아하는 가사·드라마 대사·음식으로 배우는 한국어. 회차별 드롭인, 약정 없음 — 호기심만 있으면 됩니다.</span>
+            </p>
+            <div class="line">
+              <span class="vi">Drop-in · 45 phút</span><span class="ko">드롭인 · 45분</span>
+              <a href="#contact"><span class="vi">Thử miễn phí →</span><span class="ko">무료 체험 →</span></a>
+            </div>
+          </article>
+
+          <article class="ticket reveal" data-delay="2">
+            <span class="ticket-tag hot"><span class="vi">Phổ biến nhất</span><span class="ko">베스트</span></span>
+            <h3><span class="vi">HỘI THOẠI MEMBERSHIP</span><span class="ko">회화 멤버십</span></h3>
+            <p class="who"><span class="vi">Cho người đi làm &amp; ứng viên công ty Hàn</span><span class="ko">직장인 · 한국기업 취업 준비생</span></p>
+            <p>
+              <span class="vi">Bàn hội thoại với tutor theo gói tháng — luyện nói cho công việc, phỏng vấn và thăng tiến tại các công ty Hàn Quốc.</span>
+              <span class="ko">월 구독으로 튜터 회화테이블 무제한 — 업무·면접·승진을 위한 실전 스피킹.</span>
+            </p>
+            <div class="line">
+              <span class="vi">Gói tháng · linh hoạt giờ</span><span class="ko">월 구독 · 시간 자유</span>
+              <a href="#contact"><span class="vi">Nhận tư vấn →</span><span class="ko">상담 신청 →</span></a>
+            </div>
+          </article>
+
+          <article class="ticket reveal" data-delay="2">
+            <span class="ticket-tag jade"><span class="vi">Luyện thi</span><span class="ko">시험 대비</span></span>
+            <h3>TOPIK TRACK</h3>
+            <p class="who"><span class="vi">Cho học sinh – sinh viên xét tuyển đại học</span><span class="ko">대학 입시생을 위한 정규 과정</span></p>
+            <p>
+              <span class="vi">Lộ trình 6 cấp độ bài bản. Từ 2026, TOPIK được công nhận xét tuyển đại học tại Việt Nam — điểm số của bạn là tấm vé thật.</span>
+              <span class="ko">체계적인 6단계 정규 트랙. 2026년부터 베트남 대학 입시에 TOPIK 공식 반영 — 점수가 곧 입장권입니다.</span>
+            </p>
+            <div class="line">
+              <span class="vi">6 cấp độ · lớp nhóm nhỏ</span><span class="ko">6단계 · 소그룹</span>
+              <a href="#contact"><span class="vi">Kiểm tra trình độ →</span><span class="ko">레벨테스트 →</span></a>
+            </div>
+          </article>
+
+          <article class="ticket reveal" data-delay="3">
+            <span class="ticket-tag"><span class="vi">Đi Hàn làm việc</span><span class="ko">한국 취업</span></span>
+            <h3>EPS-TOPIK</h3>
+            <p class="who"><span class="vi">Cho người chuẩn bị chương trình EPS</span><span class="ko">EPS 근로자 송출 준비생</span></p>
+            <p>
+              <span class="vi">Lớp luyện thi tập trung, chi phí hợp lý, lộ trình rõ ràng — từ con số 0 đến đủ điểm sang Hàn Quốc làm việc.</span>
+              <span class="ko">합리적 비용의 집중 대비반 — 0에서 합격선까지, 한국 취업의 가장 빠른 길.</span>
+            </p>
+            <div class="line">
+              <span class="vi">Lớp tập trung · nhóm</span><span class="ko">집중반 · 그룹</span>
+              <a href="#contact"><span class="vi">Đăng ký →</span><span class="ko">신청하기 →</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Why ======= -->
+    <section id="why" class="section-pad">
+      <div class="wrap">
+        <p class="kicker reveal"><span class="vi">Vì sao MAISTUDYMATE</span><span class="ko">왜 마이스터디메이트인가</span></p>
+        <h2 class="title reveal">
+          <span class="vi">Không phải lớp học. Một nơi bạn muốn quay lại.</span>
+          <span class="ko">교실이 아닙니다. 다시 오고 싶은 공간입니다.</span>
+        </h2>
+        <p class="sub reveal" data-delay="1">
+          <span class="vi">Học một ngôn ngữ không khó vì ngữ pháp — mà vì duy trì động lực. Chúng tôi thiết kế mọi thứ quanh điều đó.</span>
+          <span class="ko">언어가 어려운 건 문법 때문이 아니라, 동기를 지키기 어렵기 때문입니다. 우리는 그 문제를 중심으로 설계했습니다.</span>
+        </p>
+
+        <div class="why-grid reveal" data-delay="1">
+          <div class="why-cell">
+            <span class="ic">🏠</span>
+            <h3><span class="vi">Không gian, không phải phòng học</span><span class="ko">공간, 교실이 아닌</span></h3>
+            <p><span class="vi">Quán cà phê chuẩn vibe Seoul — nơi bạn muốn check-in, không phải nơi bạn phải điểm danh.</span><span class="ko">출석 체크가 아니라 체크인하고 싶은, 서울 감성의 카페.</span></p>
+          </div>
+          <div class="why-cell">
+            <span class="ic">🤝</span>
+            <h3><span class="vi">Cộng đồng, không phải một mình</span><span class="ko">혼자가 아닌 커뮤니티</span></h3>
+            <p><span class="vi">Kiosk ghép bạn với những người cùng trình độ, cùng môn đang học — bạn học thật, hẹn học thật.</span><span class="ko">키오스크가 같은 레벨, 같은 공부의 스터디메이트를 매칭합니다.</span></p>
+          </div>
+          <div class="why-cell">
+            <span class="ic">🔁</span>
+            <h3><span class="vi">Blended: App + Mặt-đối-mặt</span><span class="ko">블렌디드: 앱 + 대면</span></h3>
+            <p><span class="vi">Lý thuyết tự học trên app theo nhịp riêng; thời gian ở quán dành trọn cho hội thoại thực chiến.</span><span class="ko">이론은 앱에서 내 속도로, 카페에서는 오직 실전 회화에 집중.</span></p>
+          </div>
+          <div class="why-cell">
+            <span class="ic">🎓</span>
+            <h3><span class="vi">Tutor thật, hội thoại thật</span><span class="ko">진짜 튜터, 진짜 대화</span></h3>
+            <p><span class="vi">Tutor trình độ TOPIK 5–6 dẫn dắt từng bàn hội thoại — sửa phát âm, đẩy bạn nói nhiều hơn.</span><span class="ko">TOPIK 5–6급 튜터가 회화테이블을 리드 — 발음 교정과 스피킹 훈련.</span></p>
+          </div>
+        </div>
+
+        <div class="facts reveal" data-delay="2">
+          <span class="fact"><span class="vi">🇻🇳 Tiếng Hàn = <b>ngoại ngữ số 1</b> trong trường phổ thông VN từ 2021</span><span class="ko">🇻🇳 2021년부터 한국어 = 베트남 <b>제1외국어</b></span></span>
+          <span class="fact"><span class="vi">🏢 Samsung · LG · Hyundai · POSCO <b>ưu tiên ứng viên biết tiếng Hàn</b></span><span class="ko">🏢 삼성 · LG · 현대 · 포스코 <b>한국어 가능자 채용 우대</b></span></span>
+          <span class="fact"><span class="vi">🎓 TOPIK được <b>công nhận xét tuyển đại học</b> từ 2026</span><span class="ko">🎓 2026년부터 TOPIK <b>대학 입시 공식 인정</b></span></span>
+          <span class="fact"><span class="vi">💼 Biết tiếng Hàn = <b>phụ cấp ngôn ngữ</b> tại nhiều công ty Hàn</span><span class="ko">💼 한국어 = 다수 한국기업의 <b>어학수당</b></span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= B2B ======= -->
+    <section id="b2b" class="section-pad">
+      <div class="wrap b2b-grid">
+        <div>
+          <p class="kicker reveal"><span class="vi">Dành cho doanh nghiệp</span><span class="ko">기업 고객</span></p>
+          <h2 class="title reveal">
+            <span class="vi">Đào tạo tiếng Hàn cho đội ngũ của bạn</span>
+            <span class="ko">한국기업 출강 — 우리 팀을 위한 한국어</span>
+          </h2>
+          <p class="sub reveal" data-delay="1">
+            <span class="vi">Lớp tiếng Hàn tại văn phòng cho công ty Hàn Quốc tại Việt Nam và doanh nghiệp Việt làm việc với đối tác Hàn.</span>
+            <span class="ko">주베트남 한국기업의 현지 직원, 그리고 한국 파트너와 일하는 베트남 기업을 위한 출강 교육 프로그램입니다.</span>
+          </p>
+          <ul class="b2b-points reveal" data-delay="1">
+            <li><span class="vi">Giáo trình theo ngành: sản xuất, văn phòng, thương mại</span><span class="ko">제조·사무·상담 등 직무 맞춤 커리큘럼</span></li>
+            <li><span class="vi">Lịch học linh hoạt tại văn phòng hoặc tại quán</span><span class="ko">사내 출강 또는 카페 세션 — 유연한 스케줄</span></li>
+            <li><span class="vi">Báo cáo tiến độ định kỳ cho HR</span><span class="ko">HR 담당자용 정기 진도 리포트 제공</span></li>
+            <li><span class="vi">Kiểm tra đầu vào &amp; xếp lớp theo trình độ</span><span class="ko">입과 레벨테스트 및 수준별 분반</span></li>
+          </ul>
+          <a class="btn btn-red reveal" data-delay="2" href="#contact" data-prefill="b2b">
+            <span class="vi">Nhận đề xuất cho công ty →</span><span class="ko">기업 교육 제안받기 →</span>
+          </a>
+        </div>
+        <aside class="b2b-card reveal" data-delay="2">
+          <h3><span class="vi">Vì sao đầu tư tiếng Hàn cho nhân viên?</span><span class="ko">왜 직원 한국어 교육인가?</span></h3>
+          <ul>
+            <li><span class="vi">Giao tiếp trực tiếp với quản lý &amp; đối tác Hàn — ít hiểu nhầm, việc chạy nhanh hơn</span><span class="ko">한국인 관리자·파트너와 직접 소통 — 오해 감소, 업무 속도 향상</span></li>
+            <li><span class="vi">Giữ chân nhân tài: đào tạo là phúc lợi được Gen Z đánh giá cao</span><span class="ko">교육 복지는 Z세대 인재 리텐션의 핵심</span></li>
+            <li><span class="vi">Đội ngũ song ngữ = lợi thế khi mở rộng kinh doanh với Hàn Quốc</span><span class="ko">이중언어 팀 = 한국 비즈니스 확장의 경쟁력</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ======= Partner ======= -->
+    <section id="partner" class="section-pad">
+      <div class="wrap">
+        <div class="partner-banner reveal">
+          <div>
+            <p class="kicker"><span class="vi">Dành cho chủ quán cà phê</span><span class="ko">카페 사장님께</span></p>
+            <h2>
+              <span class="vi">Bạn có quán cà phê? Đặt một kiosk MAISTUDYMATE.</span>
+              <span class="ko">카페를 운영하시나요? 키오스크 하나면 됩니다.</span>
+            </h2>
+            <p>
+              <span class="vi">Kiosk biến quán của bạn thành điểm hẹn học tiếng Hàn của khu phố: khách mới đều đặn mỗi tuần, doanh thu chia sẻ từ các buổi học — quán không tốn chi phí đầu tư lớn, đồ uống vẫn là của bạn.</span>
+              <span class="ko">키오스크가 사장님의 카페를 동네 한국어 스터디 거점으로 만듭니다. 매주 꾸준한 신규 고객, 세션 수익 셰어 — 큰 투자 없이, 음료 매출은 그대로 사장님 몫입니다.</span>
+            </p>
+            <p class="ks">
+              <span><span class="vi">✓ Lắp đặt nhanh</span><span class="ko">✓ 빠른 설치</span></span>
+              <span><span class="vi">✓ Chia sẻ doanh thu</span><span class="ko">✓ 수익 셰어</span></span>
+              <span><span class="vi">✓ Khách mới mỗi tuần</span><span class="ko">✓ 신규 고객 유입</span></span>
+              <span><span class="vi">✓ Vận hành bởi chúng tôi</span><span class="ko">✓ 운영은 우리가</span></span>
+            </p>
+          </div>
+          <a class="btn btn-ink" href="#contact" data-prefill="partner">
+            <span class="vi">Tìm hiểu hợp tác →</span><span class="ko">제휴 문의 →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Contact / Inquiry ======= -->
+    <section id="contact" class="section-pad">
+      <div class="wrap">
+        <p class="kicker reveal"><span class="vi">Liên hệ</span><span class="ko">문의</span></p>
+        <h2 class="title reveal">
+          <span class="vi">Giữ một chỗ cho bạn</span>
+          <span class="ko">자리를 맡아두세요</span>
+        </h2>
+        <p class="sub reveal" data-delay="1">
+          <span class="vi">Để lại thông tin — chúng tôi sẽ liên hệ qua Zalo trong vòng 24 giờ. Lớp trải nghiệm đầu tiên hoàn toàn miễn phí.</span>
+          <span class="ko">정보를 남겨주시면 24시간 내 Zalo로 연락드립니다. 첫 체험 클래스는 완전 무료입니다.</span>
+        </p>
+
+        <div class="contact-grid">
+          <form class="form-card reveal" id="inquiryForm" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="f-name"><span class="vi">Họ và tên *</span><span class="ko">이름 *</span></label>
+                <input id="f-name" name="name" type="text" required autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="f-phone"><span class="vi">Số điện thoại (Zalo) *</span><span class="ko">전화번호 (Zalo) *</span></label>
+                <input id="f-phone" name="phone" type="tel" required autocomplete="tel" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-email"><span class="vi">Email (tùy chọn)</span><span class="ko">이메일 (선택)</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" />
+            </div>
+            <div class="field">
+                <label for="f-interest"><span class="vi">Bạn quan tâm đến *</span><span class="ko">관심 분야 *</span></label>
+                <select id="f-interest" name="interest" required>
+                  <option value="trial" data-vi="Lớp trải nghiệm miễn phí" data-ko="무료 체험 클래스">Lớp trải nghiệm miễn phí</option>
+                  <option value="peer" data-vi="Bàn tự học miễn phí (cùng bạn học)" data-ko="무료 셀프 스터디 테이블">Bàn tự học miễn phí (cùng bạn học)</option>
+                  <option value="membership" data-vi="Membership hội thoại" data-ko="회화 멤버십">Membership hội thoại</option>
+                  <option value="topik" data-vi="TOPIK Track" data-ko="TOPIK 트랙">TOPIK Track</option>
+                  <option value="eps" data-vi="EPS-TOPIK" data-ko="EPS-TOPIK">EPS-TOPIK</option>
+                  <option value="b2b" data-vi="Đào tạo doanh nghiệp (B2B)" data-ko="기업 출강 (B2B)">Đào tạo doanh nghiệp (B2B)</option>
+                  <option value="partner" data-vi="Hợp tác đặt kiosk (chủ quán)" data-ko="카페 키오스크 제휴">Hợp tác đặt kiosk (chủ quán)</option>
+                </select>
+              </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="f-topic"><span class="vi">Bạn đang học gì?</span><span class="ko">지금 무슨 공부를 하나요?</span></label>
+                <select id="f-topic" name="topic">
+                  <option value="topik" data-vi="Luyện thi TOPIK" data-ko="TOPIK 준비">Luyện thi TOPIK</option>
+                  <option value="conversation" data-vi="Hội thoại hằng ngày" data-ko="일상 회화">Hội thoại hằng ngày</option>
+                  <option value="kculture" data-vi="K-pop · K-drama" data-ko="K-pop · 드라마">K-pop · K-drama</option>
+                  <option value="eps" data-vi="EPS-TOPIK" data-ko="EPS-TOPIK">EPS-TOPIK</option>
+                  <option value="other" data-vi="Khác / chưa rõ" data-ko="기타 / 아직 모름">Khác / chưa rõ</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-level"><span class="vi">Trình độ tiếng Hàn</span><span class="ko">한국어 레벨</span></label>
+                <select id="f-level" name="level">
+                  <option value="zero" data-vi="Mới bắt đầu (0)" data-ko="입문 (0)">Mới bắt đầu (0)</option>
+                  <option value="beginner" data-vi="Sơ cấp (TOPIK 1–2)" data-ko="초급 (TOPIK 1–2)">Sơ cấp (TOPIK 1–2)</option>
+                  <option value="intermediate" data-vi="Trung cấp (TOPIK 3–4)" data-ko="중급 (TOPIK 3–4)">Trung cấp (TOPIK 3–4)</option>
+                  <option value="advanced" data-vi="Cao cấp (TOPIK 5–6)" data-ko="고급 (TOPIK 5–6)">Cao cấp (TOPIK 5–6)</option>
+                  <option value="na" data-vi="Không áp dụng (B2B/đối tác)" data-ko="해당 없음 (B2B/제휴)">Không áp dụng (B2B/đối tác)</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-msg"><span class="vi">Lời nhắn</span><span class="ko">메시지</span></label>
+              <textarea id="f-msg" name="message"></textarea>
+            </div>
+            <button class="btn btn-red" type="submit" style="width:100%">
+              <span class="vi">Đăng ký — giữ chỗ miễn phí</span><span class="ko">신청하기 — 무료로 자리 맡기</span>
+            </button>
+            <p class="form-note">
+              <span class="vi">Gửi form = đồng ý để MAISTUDYMATE liên hệ tư vấn. Không spam, không chia sẻ thông tin cho bên thứ ba.</span>
+              <span class="ko">폼 제출 시 상담 연락에 동의하는 것으로 간주됩니다. 스팸·제3자 제공은 없습니다.</span>
+            </p>
+            <p class="form-msg" id="formMsg" role="status"></p>
+          </form>
+
+          <aside class="channels reveal" data-delay="1">
+            <h3><span class="vi">Hoặc nhắn trực tiếp</span><span class="ko">또는 바로 연락하기</span></h3>
+            <a class="channel zalo" href="https://zalo.me/0000000000" target="_blank" rel="noopener">
+              <i class="ic">Z</i>
+              <span>Zalo Official<small><span class="vi">Phản hồi nhanh nhất · 9:00–21:00</span><span class="ko">가장 빠른 응답 · 9:00–21:00</span></small></span>
+            </a>
+            <a class="channel insta" href="https://instagram.com/maistudymate" target="_blank" rel="noopener">
+              <i class="ic">◎</i>
+              <span>@maistudymate<small><span class="vi">Không gian quán &amp; lịch lớp hằng tuần</span><span class="ko">카페 공간 &amp; 주간 클래스 일정</span></small></span>
+            </a>
+            <a class="channel tiktok" href="https://tiktok.com/@maistudymate" target="_blank" rel="noopener">
+              <i class="ic">♪</i>
+              <span>TikTok<small><span class="vi">Mini-lesson tiếng Hàn mỗi ngày</span><span class="ko">매일 한국어 미니 레슨</span></small></span>
+            </a>
+            <a class="channel mail" href="mailto:hello@maistudymate.com">
+              <i class="ic">✉</i>
+              <span>hello@maistudymate.com<small><span class="vi">B2B &amp; hợp tác đối tác</span><span class="ko">B2B &amp; 제휴 문의</span></small></span>
+            </a>
+            <p class="loc">
+              📍 <b><span class="vi">TP. Hồ Chí Minh</span><span class="ko">호치민시</span></b><br />
+              <span class="vi">Địa điểm pilot sẽ được công bố trên Instagram &amp; Zalo — theo dõi để không bỏ lỡ buổi khai giảng.</span>
+              <span class="ko">파일럿 매장 위치는 Instagram &amp; Zalo에서 공개됩니다 — 오픈 소식을 놓치지 마세요.</span>
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-brand">MAI<span class="star">✶</span>STUDYMATE</div>
+          <p class="foot-tag"><span class="vi">Hôm nay vào quán, <b>MAI</b> nói tiếng Hàn.</span><span class="ko">매일 새로 내리는 한국어.</span></p>
+          <p>
+            <span class="vi">Mạng lưới quán cà phê study tiếng Hàn đầu tiên tại Việt Nam. Bước vào quán — join một bàn học — nói tiếng Hàn thật.</span>
+            <span class="ko">베트남 최초의 한국어 스터디조인 카페 네트워크. 카페에 들어와 — 스터디에 조인하고 — 진짜 한국어를 말하세요.</span>
+          </p>
+        </div>
+        <div>
+          <h4><span class="vi">Khám phá</span><span class="ko">바로가기</span></h4>
+          <ul>
+            <li><a href="#how"><span class="vi">Cách hoạt động</span><span class="ko">이용 방법</span></a></li>
+            <li><a href="#programs"><span class="vi">Chương trình</span><span class="ko">프로그램</span></a></li>
+            <li><a href="#b2b"><span class="vi">Đào tạo doanh nghiệp</span><span class="ko">기업 교육</span></a></li>
+            <li><a href="#partner"><span class="vi">Hợp tác đặt kiosk</span><span class="ko">카페 제휴</span></a></li>
+          </ul>
+        </div>
+        <div>
+          <h4><span class="vi">Kết nối</span><span class="ko">소셜</span></h4>
+          <ul>
+            <li><a href="https://instagram.com/maistudymate" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://tiktok.com/@maistudymate" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="https://zalo.me/0000000000" target="_blank" rel="noopener">Zalo</a></li>
+            <li><a href="mailto:hello@maistudymate.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-legal">
+        <span>© 2026 MAISTUDYMATE · MAI Holdings — DATABROKER</span>
+        <span><span class="vi">Cà phê × Tiếng Hàn × Cộng đồng — TP. Hồ Chí Minh</span><span class="ko">카페 × 한국어 × 커뮤니티 — 호치민</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

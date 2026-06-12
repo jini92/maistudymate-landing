@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- MAISTUDYMATE symbol: speech-bubble cup + join spark -->
+  <!-- steam -->
+  <path d="M23 14c0-3.5 4.5-3.5 4.5-7.5" stroke="#231711" stroke-width="3" stroke-linecap="round"/>
+  <path d="M33 14c0-3.5 4.5-3.5 4.5-7.5" stroke="#231711" stroke-width="3" stroke-linecap="round"/>
+  <!-- handle -->
+  <path d="M46 30h3a7 7 0 0 1 0 14h-4" stroke="#231711" stroke-width="3" fill="none"/>
+  <!-- bubble cup -->
+  <path d="M18 20h18a10 10 0 0 1 10 10v6a10 10 0 0 1-10 10H26l-11 9v-9.8A10 10 0 0 1 8 36v-6a10 10 0 0 1 10-10z"
+        fill="#FBF7EC" stroke="#231711" stroke-width="3" stroke-linejoin="round"/>
+  <!-- join spark -->
+  <path d="M27 24l2.3 6.7 6.7 2.3-6.7 2.3-2.3 6.7-2.3-6.7-6.7-2.3 6.7-2.3z" fill="#C8401F"/>
+</svg>
