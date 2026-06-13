@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko" data-lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>MAISTUDYMATE — Join (prototype)</title>
+  <meta name="description" content="QR 스캔 → 오늘의 한국어 스터디 조인/예약 웹앱 (프로토타입)" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M18 12h18a14 14 0 0 1 14 14v8a14 14 0 0 1-14 14H26L14 58V46.5A14 14 0 0 1 4 34v-8a14 14 0 0 1 14-14z' fill='%23C8401F'/%3E%3Cpath d='M27 18l3 9 9 3-9 3-3 9-3-9-9-3 9-3z' fill='%23FBF7EC'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Gasoek+One&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- prototype badge (desktop only) -->
+  <div class="proto-note">
+    <b>MAISTUDYMATE · Join App</b> — FE 프로토타입 (D003) · 화면 흐름 클릭 데모
+    <span class="reset" id="resetBtn">↺ 처음으로</span>
+  </div>
+
+  <div class="phone">
+    <!-- top bar -->
+    <header class="appbar">
+      <span class="brand">MAI<span class="star">✶</span>STUDYMATE</span>
+      <div class="appbar-right">
+        <span class="credits" id="creditPill" title="MAI 크레딧 / điểm">✶ <b id="creditCount">0</b></span>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-setlang="vi">VI</button>
+          <button type="button" data-setlang="ko" class="active">KO</button>
+        </div>
+      </div>
+    </header>
+    <div class="store">
+      <span>☕ Cà phê Sài Gòn · NVH Sinh viên</span>
+      <span class="date" id="storeDate">Th 6 · 13/06</span>
+    </div>
+
+    <main id="app">
+
+      <!-- ===== S1. 오늘의 보드 ===== -->
+      <section class="screen active" data-screen="s1">
+        <div class="boardhead">
+          <span class="t"><span class="vi">HÔM NAY · Hôm nay tại quán</span><span class="ko">오늘의 스터디</span></span>
+          <span class="live">LIVE</span>
+        </div>
+        <p class="legend"><span class="vi">👩‍🏫 Buổi có giáo viên = trả phí &nbsp;·&nbsp; 🟢 Khách tự join với nhau = miễn phí</span><span class="ko">👩‍🏫 전문강사 세션 = 유료 &nbsp;·&nbsp; 🟢 손님끼리 조인 = 무료</span></p>
+        <div id="board" class="board"><!-- rendered by app.js --></div>
+        <button class="btn btn-red wide" data-go="s2">
+          <span class="vi">Tìm bàn học của tôi →</span><span class="ko">내 스터디 찾기 →</span>
+        </button>
+        <p class="hint"><span class="vi">Xem thoải mái — không cần đăng nhập.</span><span class="ko">로그인 없이 둘러보세요.</span></p>
+      </section>
+
+      <!-- ===== S2. 빠른 프로필 ===== -->
+      <section class="screen" data-screen="s2">
+        <button class="back" data-go="s1">←</button>
+        <h2 class="qh"><span class="vi">Bạn đang học gì?</span><span class="ko">어떤 공부를 하나요?</span></h2>
+
+        <p class="lab"><span class="vi">Chủ đề</span><span class="ko">주제</span></p>
+        <div class="seg" id="segTopic" data-field="topic">
+          <button data-val="topik">TOPIK</button>
+          <button data-val="conversation"><span class="vi">Hội thoại</span><span class="ko">회화</span></button>
+          <button data-val="kculture">K-Culture</button>
+          <button data-val="eps">EPS</button>
+        </div>
+
+        <p class="lab"><span class="vi">Trình độ</span><span class="ko">레벨</span></p>
+        <div class="seg" id="segLevel" data-field="level">
+          <button data-val="zero"><span class="vi">Mới</span><span class="ko">입문</span></button>
+          <button data-val="beginner"><span class="vi">Sơ cấp</span><span class="ko">초급</span></button>
+          <button data-val="intermediate"><span class="vi">Trung cấp</span><span class="ko">중급</span></button>
+          <button data-val="advanced"><span class="vi">Cao cấp</span><span class="ko">고급</span></button>
+        </div>
+
+        <label class="fld"><span class="vi">Tên</span><span class="ko">이름</span>
+          <input id="fName" type="text" autocomplete="name" />
+        </label>
+        <label class="fld"><span class="vi">Zalo</span><span class="ko">Zalo</span>
+          <input id="fZalo" type="tel" inputmode="tel" autocomplete="tel" />
+        </label>
+
+        <button class="btn btn-red wide" id="toMatch">
+          <span class="vi">Tiếp tục →</span><span class="ko">다음 →</span>
+        </button>
+      </section>
+
+      <!-- ===== S3. 매칭 & 선택 ===== -->
+      <section class="screen" data-screen="s3">
+        <button class="back" data-go="s2">←</button>
+        <h2 class="qh">🎯 <span class="vi">Tìm thấy bạn học cùng nhóm</span><span class="ko">같은 공부 친구를 찾았어요</span></h2>
+        <p class="matchmeta" id="matchMeta"></p>
+        <div id="matchList" class="board"><!-- rendered --></div>
+        <button class="btn btn-jade wide" id="openTableBtn">
+          <span class="vi">Tự mở bàn self-study (rủ người cùng học) →</span><span class="ko">내가 셀프 테이블 열기 (같은 공부 손님 모으기) →</span>
+        </button>
+        <p class="hint"><span class="vi">Hoặc nếu chưa muốn ngồi một mình?</span><span class="ko">혼자 앉긴 싫다면?</span></p>
+        <button class="btn btn-ink wide" data-go="s6">
+          <span class="vi">Báo tôi khi mở bàn cùng chủ đề →</span><span class="ko">주제별 오픈 알림만 받기 →</span>
+        </button>
+      </section>
+
+      <!-- ===== S4. 조인 확인 + 결제 ===== -->
+      <section class="screen" data-screen="s4">
+        <button class="back" data-go="s3">←</button>
+        <h2 class="qh"><span class="vi">Xác nhận tham gia</span><span class="ko">조인 확인</span></h2>
+        <div class="confirm" id="confirmCard"><!-- rendered --></div>
+        <div id="payBlock"></div>
+      </section>
+
+      <!-- ===== S5. 완료 ===== -->
+      <section class="screen" data-screen="s5">
+        <div class="done">
+          <div class="stamp">✶</div>
+          <h2 id="doneTitle"><span class="vi">Đã tham gia!</span><span class="ko">조인 완료!</span></h2>
+          <div class="ticket" id="doneTicket"><!-- rendered --></div>
+          <p class="earn" id="earnLine"></p>
+          <p class="drink">☕ <span class="vi">Cùng một ly nước nhé</span><span class="ko">음료 한 잔과 함께</span></p>
+          <p class="cards">🃏 <span class="vi">Thẻ chủ đề có sẵn tại bàn</span><span class="ko">토픽 카드는 테이블에 있어요</span></p>
+          <button class="btn btn-red wide" id="zaloSub">
+            <span class="vi">Kết bạn Zalo = đăng ký (lịch &amp; điểm)</span><span class="ko">Zalo 친구추가 = 회원가입 (세션·크레딧 알림)</span>
+          </button>
+          <button class="btn wide" id="addHome">
+            <span class="vi">+ Thêm vào màn hình chính</span><span class="ko">+ 홈 화면에 추가</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ===== S6. 오픈 알림 신청 ===== -->
+      <section class="screen" data-screen="s6">
+        <button class="back" data-go="s3">←</button>
+        <h2 class="qh"><span class="vi">Chưa có bàn đó</span><span class="ko">아직 그 테이블이 없어요</span></h2>
+        <p class="hint"><span class="vi">Mở là báo bạn đầu tiên.</span><span class="ko">열리면 제일 먼저 알려드릴게요.</span></p>
+        <p class="matchmeta" id="openMeta"></p>
+        <p class="lab"><span class="vi">Giờ mong muốn</span><span class="ko">희망 시간</span></p>
+        <div class="seg" id="segWish" data-field="wish">
+          <button data-val="am"><span class="vi">Sáng</span><span class="ko">오전</span></button>
+          <button data-val="pm"><span class="vi">Chiều</span><span class="ko">오후</span></button>
+          <button data-val="eve"><span class="vi">Tối</span><span class="ko">저녁</span></button>
+        </div>
+        <button class="btn btn-red wide" id="openSubmit">
+          <span class="vi">Đăng ký nhận thông báo →</span><span class="ko">알림 신청 →</span>
+        </button>
+        <p class="okmsg" id="openOk" hidden>✓ <span class="vi">Đã đăng ký! Sẽ báo qua Zalo.</span><span class="ko">신청 완료! Zalo로 알려드릴게요.</span></p>
+      </section>
+
+      <!-- ===== S7. 빈 테이블 클레임 (첫 손님/호스트) ===== -->
+      <section class="screen" data-screen="s7">
+        <button class="back" data-go="s3">←</button>
+        <h2 class="qh"><span class="vi">Bạn ngồi bàn nào?</span><span class="ko">어느 테이블인가요?</span></h2>
+        <p class="hint" style="text-align:left;margin:2px 0 14px"><span class="vi">Quét QR trên bàn đang ngồi, hoặc chọn một bàn trống.</span><span class="ko">앉은 테이블의 QR을 스캔하거나, 비어 있는 자리를 선택하세요.</span></p>
+        <div id="tableGrid" class="tablegrid"><!-- rendered --></div>
+        <button class="btn btn-jade wide" id="claimBtn" disabled>
+          <span class="vi">Mở bàn self-study tại đây →</span><span class="ko">이 자리에서 셀프 스터디 열기 →</span>
+        </button>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
