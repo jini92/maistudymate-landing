@@ -141,7 +141,8 @@ function renderConfirm() {
       `<div class="timing">
         <button class="tm-opt ${pre ? "sel" : ""}" data-timing="prepay"><b>${preK}k₫</b>${bi("Trả trước · -10%", "선결제 예약가 · 10%↓")}</button>
         <button class="tm-opt ${pre ? "" : "sel"}" data-timing="onsite"><b>${fullK}k₫</b>${bi("Tại quán · sau buổi", "현장 결제 · 수업 후")}</button>
-      </div>` + (pre
+      </div>
+      <p class="drinknote">💡 ${bi("Phí buổi học trả cho gia sư độc lập · quán nhận phí không gian và đồ uống", "세션비는 독립 강사에게 · 카페는 공간료·음료")}</p>` + (pre
         ? `<p class="paylabel">${bi("Thanh toán", "결제")}</p>
         <div class="pays"><div class="pay" data-pay="momo">MoMo</div><div class="pay" data-pay="zalopay">ZaloPay</div></div>
         <button class="btn btn-red wide" id="goBtn" disabled>${bi("Trả trước &amp; tham gia", "선결제하고 조인")}</button>`
