@@ -289,6 +289,9 @@ a { color: inherit; }
 .stat b .ko { font-family: var(--font-ko-body); font-weight: 900; }
 .stat > span { font-size: 0.76rem; color: var(--ink-soft); line-height: 1.45; display: block; }
 
+.kiosk-link { display: block; text-decoration: none; color: inherit; transition: transform .15s ease; }
+.kiosk-link:hover { transform: translateY(-3px); }
+.kiosk-hint { display: block; text-align: center; margin-top: 10px; font-size: .82rem; font-weight: 700; color: var(--red); }
 /* --- kiosk board --- */
 .kiosk {
   position: relative;
