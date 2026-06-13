@@ -176,6 +176,15 @@ main { flex: 1; position: relative; }
 .confirm .sub { font-size: .86rem; color: var(--ink-soft); margin-top: 4px; }
 .confirm .price { font-size: 1.5rem; font-weight: 800; margin-top: 10px; }
 .confirm .price.free { color: var(--jade); }
+.timing { display: flex; gap: 10px; margin-bottom: 14px; }
+.timing .tm-opt {
+  flex: 1; text-align: left; border: 1.5px solid var(--ink); border-radius: 12px; padding: 10px 12px;
+  background: var(--cream); cursor: pointer; font: 600 .82rem var(--font-body); line-height: 1.45;
+}
+.timing .tm-opt b { display: block; font-size: .92rem; }
+.timing .tm-opt small { color: var(--ink-soft); }
+.timing .tm-opt.sel { background: var(--red); color: var(--cream); border-color: var(--red); }
+.timing .tm-opt.sel small { color: rgba(251,247,236,.85); }
 .paylabel { font-size: .8rem; font-weight: 700; color: var(--ink-soft); margin-bottom: 8px; }
 .pays { display: flex; gap: 10px; margin-bottom: 4px; }
 .pays .pay {

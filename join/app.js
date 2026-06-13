@@ -124,40 +124,58 @@ function renderConfirm() {
   $("#confirmCard").innerHTML = `
     <div class="nm">${s.name}</div>
     <div class="sub">${s.time} · ${bi("Bàn", "테이블")} ${s.table} · ${s.dur}${bi("ph", "분")}</div>
-    <div class="price ${free ? "free" : ""}">${free ? bi("Miễn phí", "무료") : (s.price / 1000) + ",000₫"}</div>`;
+    ${free ? `<div class="price free">${bi("Miễn phí", "무료")}</div>` : ``}`;
   if (free) {
     $("#payBlock").innerHTML = `
       <p class="drinknote">☕ ${bi("Vé vào = một ly nước (không cần thanh toán app)", "입장권은 음료 한 잔 (앱 결제 없음)")}</p>
       <button class="btn btn-jade wide" id="joinFree">${bi("Tham gia miễn phí", "무료로 조인")}</button>`;
     $("#joinFree").addEventListener("click", () => finishJoin());
-  } else {
-    $("#payBlock").innerHTML = `
-      <p class="paylabel">${bi("Thanh toán", "결제")}</p>
-      <div class="pays">
-        <div class="pay" data-pay="momo">MoMo</div>
-        <div class="pay" data-pay="zalopay">ZaloPay</div>
-      </div>
-      <button class="btn btn-red wide" id="payBtn" disabled>${bi("Thanh toán &amp; tham gia", "결제하고 조인")}</button>`;
-    document.querySelectorAll("#payBlock .pay").forEach(p =>
-      p.addEventListener("click", () => {
-        document.querySelectorAll("#payBlock .pay").forEach(x => x.classList.remove("sel"));
-        p.classList.add("sel"); state.pay = p.dataset.pay; $("#payBtn").disabled = false;
-      }));
-    $("#payBtn").addEventListener("click", () => finishJoin());
+    return;
   }
+  // 유료: 선결제(예약가·10%↓) vs 현장 후불(현장가·정액)
+  const fullK = s.price / 1000, preK = Math.round(s.price * 0.9 / 1000);
+  state.timing = "prepay"; state.pay = null;
+  function renderPay() {
+    const pre = state.timing === "prepay";
+    $("#payBlock").innerHTML =
+      `<div class="timing">
+        <button class="tm-opt ${pre ? "sel" : ""}" data-timing="prepay"><b>${preK}k₫</b>${bi("Trả trước · -10%", "선결제 예약가 · 10%↓")}</button>
+        <button class="tm-opt ${pre ? "" : "sel"}" data-timing="onsite"><b>${fullK}k₫</b>${bi("Tại quán · sau buổi", "현장 결제 · 수업 후")}</button>
+      </div>` + (pre
+        ? `<p class="paylabel">${bi("Thanh toán", "결제")}</p>
+        <div class="pays"><div class="pay" data-pay="momo">MoMo</div><div class="pay" data-pay="zalopay">ZaloPay</div></div>
+        <button class="btn btn-red wide" id="goBtn" disabled>${bi("Trả trước &amp; tham gia", "선결제하고 조인")}</button>`
+        : `<p class="drinknote">${bi("Giữ chỗ — trả tại quầy sau buổi học (cần Zalo để xác nhận).", "좌석 예약 — 수업 후 카운터 결제 (확인용 Zalo 필요).")}</p>
+        <button class="btn btn-ink wide" id="goBtn">${bi("Giữ chỗ (trả tại quán)", "현장 결제로 예약")}</button>`);
+    document.querySelectorAll("#payBlock .tm-opt").forEach(b =>
+      b.addEventListener("click", () => { state.timing = b.dataset.timing; state.pay = null; renderPay(); }));
+    if (pre) {
+      document.querySelectorAll("#payBlock .pay").forEach(p =>
+        p.addEventListener("click", () => {
+          document.querySelectorAll("#payBlock .pay").forEach(x => x.classList.remove("sel"));
+          p.classList.add("sel"); state.pay = p.dataset.pay; $("#goBtn").disabled = false;
+        }));
+    }
+    $("#goBtn").addEventListener("click", () => finishJoin());
+  }
+  renderPay();
 }
 function finishJoin(host = false) {
   const s = state.session;
   $("#doneTitle").innerHTML = host ? bi("Đã mở bàn!", "테이블을 열었어요!") : bi("Đã tham gia!", "조인 완료!");
+  const fullK = s.price / 1000, preK = Math.round(s.price * 0.9 / 1000);
+  const paidStr = !s.price ? "" : (state.timing === "onsite"
+    ? " · " + bi(`tại quán ${fullK}k (sau buổi)`, `현장 ${fullK}k(수업 후)`)
+    : " · " + bi(`trả trước ${preK}k ✓`, `선결제 ${preK}k ✓`));
   const line = host
     ? bi("Đang chờ bạn học cùng chủ đề tham gia...", "같은 공부 손님이 합류하길 기다리는 중...")
-    : `${s.time} · ${s.dur}${bi("ph", "분")}${s.price ? " · " + (s.price / 1000) + "k₫ ✓" : ""}`;
+    : `${s.time} · ${s.dur}${bi("ph", "분")}${paidStr}`;
   $("#doneTicket").innerHTML = `
     <div class="tbl">${bi(`Bàn ${s.table}`, `${s.table}번 테이블`)}</div>
     <div class="ses">${s.name}</div>
     <div class="tm">${line}</div>`;
   // MAI 크레딧 적립: 방문/조인 +1 · 호스트 보너스 +2 · 전문강사(유료) 세션 +1
-  const earn = (host ? 2 : 1) + (s.price > 0 ? 1 : 0);
+  const earn = (host ? 2 : 1) + (s.price > 0 ? 1 : 0) + (s.price > 0 && state.timing === "prepay" ? 1 : 0);
   state.credits += earn;
   localStorage.setItem("msm-credits", state.credits);
   renderCredits();
