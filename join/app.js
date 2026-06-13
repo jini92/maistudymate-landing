@@ -180,7 +180,7 @@ function finishJoin(host = false) {
   state.credits += earn;
   localStorage.setItem("msm-credits", state.credits);
   renderCredits();
-  $("#earnLine").innerHTML = bi(`✶ +${earn} điểm! · Đủ 5 điểm → học thử buổi có giáo viên miễn phí`, `✶ +${earn} 크레딧 적립! · 5개 모으면 전문강사 세션 무료체험`);
+  $("#earnLine").innerHTML = bi(`✶ +${earn}p! · Dùng cho không gian·đồ uống·chỗ ngồi (nạp +10%)`, `✶ +${earn}p 적립! · 공간·F&B·좌석에 사용 (충전 시 +10%)`);
   go("s5");
 }
 
